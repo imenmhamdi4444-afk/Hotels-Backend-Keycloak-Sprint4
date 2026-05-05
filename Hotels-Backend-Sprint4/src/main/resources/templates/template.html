@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+     th:fragment="menu">
+    <a class="navbar-brand" th:href="@{/}">Hotels App</a>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+
+            <!-- Lien vers la liste : toujours visible -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/ListeHotels}">
+                    Liste des Hôtels
+                </a>
+            </li>
+
+            <!-- Lien Ajouter : visible pour tout le monde (pas de sécurité) -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/showCreate}">
+                    Ajouter un Hôtel
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
